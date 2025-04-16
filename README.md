@@ -1,40 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Meme Directory App
 
-## Getting Started
+A responsive React application built using [HeroUI](https://www.heroui.com), styled with Tailwind CSS, and deployed on [Railway](https://railway.app). The app showcases a collection of popular memes with two different views: a table and a card list.
 
-First, run the development server:
+## 🔗 Live Demo
+
+[Access the deployed app here](https://your-railway-project-url.railway.app)
+
+---
+
+## 📋 Features
+
+- ✅ 10 memes displayed in two formats: table and card list
+- ✅ Separate static pages for each view
+- ✅ Navigation between views via HeroUI `Navbar`
+- ✅ Editable meme details via HeroUI `Modal` and `Input` components
+- ✅ Data is persisted in browser cookies
+- ✅ Responsive layout optimized for mobile and desktop
+- ✅ Full validation of meme fields
+
+---
+
+## 📄 Pages Overview
+
+### 1. **Table View**
+- Each meme is a row in a HeroUI `Table`
+- Columns:
+    - ID (read-only)
+    - Name
+    - Number of Likes
+    - Actions (with `Edit` button)
+- Clicking `Edit` opens a HeroUI `Modal` with a form to edit meme fields
+
+### 2. **Card View**
+- Grid of HeroUI `Card` components (4 columns on desktop, 1 on mobile)
+- Each card includes:
+    - Meme image
+    - Meme title
+    - Like count
+    - External link to the meme source
+
+---
+
+## 🧠 Meme Schema
+
+| Field       | Type     | Notes                                      |
+|-------------|----------|--------------------------------------------|
+| `id`        | number   | Auto-generated, read-only                  |
+| `title`     | string   | Required, 3–100 characters                 |
+| `imageUrl`  | string   | Required, must be a valid `.jpg` URL       |
+| `likes`     | number   | Random number between 0–99                 |
+| `link`      | string   | Required, URL to meme source               |
+
+---
+
+## ⚙️ Tech Stack
+
+- [React](https://reactjs.org)
+- [Next.js](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [HeroUI](https://www.heroui.com)
+- [js-cookie](https://www.npmjs.com/package/js-cookie)
+- [Railway](https://railway.app) for deployment
+
+---
+
+## 🚀 How to Run Locally
+
+1. Clone the repo:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/your-username/meme-directory.git
+cd meme-directory
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
