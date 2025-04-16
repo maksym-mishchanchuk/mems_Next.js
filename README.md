@@ -60,7 +60,7 @@ A responsive React application built using [HeroUI](https://www.heroui.com), sty
 - [Tailwind CSS](https://tailwindcss.com)
 - [HeroUI](https://www.heroui.com)
 - [js-cookie](https://www.npmjs.com/package/js-cookie)
-- [Railway](https://railway.app) for deployment
+- [Railway DEMO](https://memsnextjs-production.up.railway.app/list) for deployment
 
 ---
 
@@ -69,6 +69,6 @@ A responsive React application built using [HeroUI](https://www.heroui.com), sty
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/your-username/meme-directory.git
+git clone https://github.com/maksym-mishchanchuk/meme-directory.git
 cd meme-directory
 
