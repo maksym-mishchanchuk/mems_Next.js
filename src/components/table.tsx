@@ -92,7 +92,7 @@ export default function TablePage() {
                                     type="number"
                                     min={0}
                                     max={99}
-                                    defaultValue={editingMeme.likes}
+                                    defaultValue={editingMeme.likes ?? 0}
                                     required
                                 />
                             </div>

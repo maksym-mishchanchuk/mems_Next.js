@@ -16,14 +16,14 @@ export function useMemeStorage(defaultMemes: Meme[]) {
   const [memes, setMemes] = useState<Meme[] | null>(null);
 
   useEffect(() => {
-    const saved = Cookies.get(COOKIE_KEY);
+    const saved = Cookies.get(COOKIE_KEY) as string | undefined; // Явно вказуємо тип
     let initialMemes: Meme[];
 
     if (saved) {
       try {
         initialMemes = JSON.parse(saved);
       } catch (e) {
-        console.error("Invalid JSON in cookie, fallback to default memes");
+        console.error(`Invalid JSON in cookie, fallback to default memes, ${e}`);
         initialMemes = defaultMemes;
       }
     } else {
