@@ -20,6 +20,8 @@ export default function ListCards() {
                         </CardHeader>
                         <CardContent className="flex flex-col gap-2">
                             <Image
+                                width={600}
+                                height={200}
                                 src={meme.imageUrl}
                                 alt={meme.title}
                                 className="w-full h-70 object-cover rounded"

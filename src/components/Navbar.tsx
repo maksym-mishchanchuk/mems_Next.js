@@ -18,7 +18,13 @@ export default function Navbar() {
         <header className="bg-white border-b shadow-sm">
             <div className="p-1 sm:p-6 py-3 flex gap-4">
                 <Link href="/">
-                <Image src="/logo.png" alt="Logo" className="w-7 h-7"/>
+                <Image
+                    width={28}
+                    height={28}
+                    src="/logo.png"
+                    alt="Logo"
+                    className="w-7 h-7"
+                />
                 </Link>
                 <nav className="flex gap-4">
                     {navItems.map(({ href, label }) => (
