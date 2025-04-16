@@ -3,6 +3,7 @@
 import { defaultMemes } from "@/lib/memes";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useMemeStorage } from '@/lib/utils';
+import Image from 'next/image';
 
 export default function ListCards() {
     const [memes] = useMemeStorage(defaultMemes);
@@ -18,7 +19,7 @@ export default function ListCards() {
                             <CardTitle>{meme.title}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex flex-col gap-2">
-                            <img
+                            <Image
                                 src={meme.imageUrl}
                                 alt={meme.title}
                                 className="w-full h-70 object-cover rounded"

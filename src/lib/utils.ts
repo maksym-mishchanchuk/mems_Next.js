@@ -35,7 +35,7 @@ export function useMemeStorage(defaultMemes: Meme[]) {
     }
 
     setMemes(initialMemes);
-  }, []);
+  }, [defaultMemes]);
 
   useEffect(() => {
     if (memes) {

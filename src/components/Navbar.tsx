@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from "@/lib/utils";
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 const navItems = [
     { href: '/', label: 'Table' },
@@ -17,7 +18,7 @@ export default function Navbar() {
         <header className="bg-white border-b shadow-sm">
             <div className="p-1 sm:p-6 py-3 flex gap-4">
                 <Link href="/">
-                <img src="/logo.png" alt="Logo" className="w-7 h-7"/>
+                <Image src="/logo.png" alt="Logo" className="w-7 h-7"/>
                 </Link>
                 <nav className="flex gap-4">
                     {navItems.map(({ href, label }) => (
